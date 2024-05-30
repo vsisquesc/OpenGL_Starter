@@ -1,0 +1,3 @@
+[submodule "lib/OpenGL_Boilerplate"]
+	path = lib/OpenGL_Boilerplate
+	url = https://github.com/vsisquesc/OpenGL_Boilerplate_lib
