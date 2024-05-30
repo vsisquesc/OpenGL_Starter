@@ -5,7 +5,7 @@ hacer clone del repo
 
 acceder a lib
 
-ejecutar -> git submodule add https://github.com/vsisquesc/OpenGL_Boilerplate_lib OpenGL_Boilerplate
+ejecutar -> git submodule add https://github.com/vsisquesc/OpenGL_Boilerplate OpenGL_Boilerplate
 
 git submodule update --init --recursive
 
