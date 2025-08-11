@@ -24,6 +24,7 @@ else()
 endif()
 
 add_subdirectory(lib/OpenGL_Boilerplate) 
+
 list(APPEND SOURCES
     src/main.cpp  )
 add_executable(OpenGL_Starter ${SOURCES})
