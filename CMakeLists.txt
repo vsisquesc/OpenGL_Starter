@@ -23,7 +23,7 @@ else()
     set(GLFW_BUILD_WAYLAND ON CACHE BOOL "Build Wayland backend" FORCE)
 endif()
 
-add_subdirectory(lib/OpenGL_Boilerplate) 
+add_subdirectory(external/OpenGL_Boilerplate) 
 
 list(APPEND SOURCES
     src/main.cpp  )
@@ -34,7 +34,7 @@ target_include_directories(OpenGL_Starter PUBLIC
     glfw
     glad
     imgui
-    lib/linalg)
+    external/linalg)
 
 target_link_libraries(OpenGL_Starter PUBLIC OpenGL_Boilerplate
 glfw

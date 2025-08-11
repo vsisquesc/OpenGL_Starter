@@ -1,3 +1,6 @@
 [submodule "external/linalg"]
 	path = external/linalg
 	url = https://github.com/sgorsten/linalg
+[submodule "external/OpenGL_Boilerplate"]
+	path = external/OpenGL_Boilerplate
+	url = https://github.com/vsisquesc/OpenGL_Boilerplate

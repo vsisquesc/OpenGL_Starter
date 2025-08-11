@@ -3,7 +3,7 @@
 Software render engine, using c++, imgui and GLFW
 hacer clone del repo
 
-acceder a lib
+acceder a external
 
 ejecutar ->  
 git submodule update --init --recursive
