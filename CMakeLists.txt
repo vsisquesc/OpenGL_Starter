@@ -32,7 +32,8 @@ target_include_directories(OpenGL_Starter PUBLIC
     OpenGL_Boilerplate
     glfw
     glad
-    imgui)
+    imgui
+    lib/linalg)
 
 target_link_libraries(OpenGL_Starter PUBLIC OpenGL_Boilerplate
 glfw
