@@ -26,10 +26,18 @@ endif()
 add_subdirectory(external/OpenGL_Boilerplate) 
 
 list(APPEND SOURCES
-    src/main.cpp  )
+    src/APP_settings.cpp
+    viewport/src/Rasterizer.cpp
+    settings/src/Point.cpp
+    src/main.cpp
+    )
+
 add_executable(OpenGL_Starter ${SOURCES})
 
 target_include_directories(OpenGL_Starter PUBLIC
+    include/
+    viewport/include/
+    settings/include/
     OpenGL_Boilerplate
     glfw
     glad
