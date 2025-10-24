@@ -1,17 +1,23 @@
 #pragma once
 #include "Point.hpp"
 #include "APP.hpp"
+#include "ViewportSettings.hpp"
 #include <APP_settings.hpp>
-
 #include <functional>
 #include <glad/glad.h>
 #include <imgui.h>
 
-bool Point::render(Settings &settings) {
+bool Point::render(ViewportSettings &viewport_settings, Settings &settings) {
     APP_settings *appSettings = dynamic_cast<APP_settings *>(&settings);
 
     if (ImGui::Button("Reset local settings")) {
         appSettings->resetValues();
+    }
+
+    if (ImGui::Button("SaveImage")) {
+        appSettings->setSave(true);
+    } else {
+        appSettings->setSave(false);
     }
 
     if (ImGui::InputInt("point x", &appSettings->point_x)) {

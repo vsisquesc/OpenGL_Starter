@@ -27,6 +27,7 @@ add_subdirectory(external/OpenGL_Boilerplate)
 
 list(APPEND SOURCES
     src/APP_settings.cpp
+    src/tgaimage.cpp
     viewport/src/Rasterizer.cpp
     settings/src/Point.cpp
     src/main.cpp

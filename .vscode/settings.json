@@ -9,6 +9,9 @@
 		"**/*.exe": true,
 	},
 	"files.associations": {
+		"*.page-template": "vue",
+		"*.layout-template": "vue",
+		"*.vue": "vue",
 		"xstring": "cpp",
 		"xutility": "cpp",
 		"array": "cpp",
@@ -69,7 +72,26 @@
 		"xlocnum": "cpp",
 		"xmemory": "cpp",
 		"xstddef": "cpp",
-		"xtr1common": "cpp"
+		"xtr1common": "cpp",
+		"random": "cpp",
+		"charconv": "cpp",
+		"chrono": "cpp",
+		"condition_variable": "cpp",
+		"csignal": "cpp",
+		"map": "cpp",
+		"set": "cpp",
+		"numeric": "cpp",
+		"ratio": "cpp",
+		"format": "cpp",
+		"iomanip": "cpp",
+		"mutex": "cpp",
+		"numbers": "cpp",
+		"semaphore": "cpp",
+		"span": "cpp",
+		"stop_token": "cpp",
+		"text_encoding": "cpp",
+		"thread": "cpp",
+		"variant": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
