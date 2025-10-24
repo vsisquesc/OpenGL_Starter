@@ -1,4 +1,3 @@
-#pragma once
 #include "Point.hpp"
 #include "APP.hpp"
 #include "ViewportSettings.hpp"
@@ -7,8 +6,10 @@
 #include <glad/glad.h>
 #include <imgui.h>
 
-bool Point::render(ViewportSettings &viewport_settings, Settings &settings) {
-    APP_settings *appSettings = dynamic_cast<APP_settings *>(&settings);
+Point::Point(ViewportSettings &viewport_settings, Settings &settings) : SettingsRenderer(viewport_settings, settings) {
+}
+bool Point::render() {
+    APP_settings *appSettings = dynamic_cast<APP_settings *>(&this->local_settings);
 
     if (ImGui::Button("Reset local settings")) {
         appSettings->resetValues();

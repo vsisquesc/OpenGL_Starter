@@ -14,11 +14,11 @@
 
 // Main code
 int main() {
-    APP_settings settings = APP_settings();
-    std::unique_ptr<Rasterizer> rasterizer = std::make_unique<Rasterizer>();
-    std::unique_ptr<Point> point = std::make_unique<Point>();
-    // APP application = APP(settings);
-    APP application = APP(settings, std::move(rasterizer), std::move(point));
+    ViewportSettings viewport_settings = ViewportSettings();
+    APP_settings local_settings = APP_settings();
+    std::unique_ptr<Rasterizer> rasterizer = std::make_unique<Rasterizer>(viewport_settings, local_settings);
+    std::unique_ptr<Point> point = std::make_unique<Point>(viewport_settings, local_settings);
+    APP application = APP(viewport_settings, local_settings, std::move(rasterizer), std::move(point));
     application.run();
     return 0;
 }

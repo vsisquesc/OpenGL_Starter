@@ -7,5 +7,6 @@
 #include <imgui.h>
 class Point : public SettingsRenderer {
 public:
-    virtual bool render(ViewportSettings &viewport_settings, Settings &settings) override;
+    Point(ViewportSettings &viewport_settings, Settings &settings);
+    virtual bool render() override;
 };

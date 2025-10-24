@@ -5,13 +5,15 @@
 #include <functional>
 #include <glad/glad.h>
 #include <imgui.h>
+#include <tgaimage.hpp>
 
 class Rasterizer : public ViewportRenderer {
 public:
-    virtual bool render(ViewportSettings &viewport_settings, Settings &settings, unsigned char **data) override;
+    Rasterizer(ViewportSettings &viewport_settings, Settings &settings);
+    virtual bool render(unsigned char **data) override;
 
-    // private:
-    //     TGAImage getFramebuffer();
-    //     void getViewport(TGAImage image);
-    //     void saveImage(TGAImage image)
+private:
+    TGAImage RenderImage();
+    void TGA_to_buffer(TGAImage image, unsigned char **data);
+    void saveImage(TGAImage image);
 };
